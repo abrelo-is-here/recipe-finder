@@ -59,7 +59,7 @@ app.get("/api/favorite/:userId", async (req, res) => {
       .where(eq(favoriteTabel.userID, String(userId)))
 
     res.status(200).json(userFavorites);
-    console.log(userFavorites)
+   
   } catch (error) {
     console.error("Error fetching favorites:", error);
     res.status(500).json({ message: "Internal server error" });
