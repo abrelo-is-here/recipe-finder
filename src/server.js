@@ -9,6 +9,9 @@ const PORT = ENV.PORT || 3500
 
 app.use(express.json())
 
+app.get("/", async (req,res) =>{
+    res.json({message: "Welcom To recipe Finder Page"})
+})
 app.post("/api/favorite", async (req, res) => {
   try {
     const { userId, recipeId, title, image, cookTime, servings } = req.body;
